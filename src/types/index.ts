@@ -4,16 +4,44 @@ export interface Student {
   name: string;
 }
 
+export interface SubWork {
+  id: string;
+  name: string;
+  workTypeId: string;
+}
+
 export interface WorkType {
   id: string;
   name: string;
+  icon: string;
 }
 
 export interface FeedbackTemplate {
   id: string;
+  workTypeId: string;
   category: 'excelente' | 'bueno' | 'regular' | 'debe_mejorar' | 'no_presento';
   content: string;
 }
+
+export const DEFAULT_WORK_TYPES: WorkType[] = [
+  { id: 'productos_academicos', name: 'Productos Académicos', icon: 'mdi:file-document' },
+  { id: 'presentaciones', name: 'Presentaciones', icon: 'mdi:presentation' },
+  { id: 'competencias_habilidades', name: 'Competencias y Habilidades', icon: 'mdi:head-cog' },
+  { id: 'participacion', name: 'Participación', icon: 'mdi:hand-wave' },
+  { id: 'plataformas_externas', name: 'Plataformas Externas', icon: 'mdi:web' },
+];
+
+export const DEFAULT_SUBWORKS: SubWork[] = [
+  { id: 'informes', name: 'Informes', workTypeId: 'productos_academicos' },
+  { id: 'informe_semanal', name: 'Informe Semanal', workTypeId: 'productos_academicos' },
+  { id: 'tareas', name: 'Tareas', workTypeId: 'productos_academicos' },
+  { id: 'entregable_final', name: 'Entregable Final', workTypeId: 'productos_academicos' },
+  { id: 'proyecto_final', name: 'Proyecto Final', workTypeId: 'productos_academicos' },
+  { id: 'exposiciones', name: 'Exposiciones', workTypeId: 'presentaciones' },
+  { id: 'habilidades', name: 'Habilidades', workTypeId: 'competencias_habilidades' },
+  { id: 'participacion_clase', name: 'Participación', workTypeId: 'participacion' },
+  { id: 'plataforma_externa', name: 'Plataforma Externas', workTypeId: 'plataformas_externas' },
+];
 
 export type FeedbackCategory = FeedbackTemplate['category'];
 

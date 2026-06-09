@@ -15,7 +15,7 @@ import { Toast } from './components/ui';
 
 function App() {
   const { students, importStudents, updateStudent, deleteStudent, clearStudents } = useStudents();
-  const { workTypes, addWorkType, updateWorkType, deleteWorkType } = useWorkTypes();
+  const { workTypes, subWorks, addWorkType, updateWorkType, deleteWorkType, addSubWork, updateSubWork, deleteSubWork } = useWorkTypes();
   const { templates, addTemplate, updateTemplate, deleteTemplate } = useTemplates();
   const { theme, toggleTheme } = useTheme();
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'info' } | null>(null);
@@ -90,14 +90,19 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <WorkTypes
                 workTypes={workTypes}
-                onAdd={addWorkType}
-                onUpdate={updateWorkType}
-                onDelete={deleteWorkType}
+                subWorks={subWorks}
+                onAddWorkType={addWorkType}
+                onUpdateWorkType={updateWorkType}
+                onDeleteWorkType={deleteWorkType}
+                onAddSubWork={addSubWork}
+                onUpdateSubWork={updateSubWork}
+                onDeleteSubWork={deleteSubWork}
               />
               <MessageSettings onSettingsChange={handleSettingsChange} />
             </div>
             <Templates
               templates={templates}
+              workTypes={workTypes}
               onAdd={addTemplate}
               onUpdate={updateTemplate}
               onDelete={deleteTemplate}
@@ -105,6 +110,7 @@ function App() {
             <FeedbackGenerator
               students={students}
               workTypes={workTypes}
+              subWorks={subWorks}
               templates={templates}
               header={messageHeader}
               footer={messageFooter}
