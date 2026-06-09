@@ -36,33 +36,33 @@ function App() {
       <div className="fixed inset-0 bg-linear-to-br from-slate-50 to-senati-light dark:from-gray-900 dark:to-gray-800 transition-colors -z-20"></div>
       <ParticlesBackground />
       <header className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-40 shadow-sm">
-        <div className="px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <img src={logoSenati} alt="SENATI" className="h-12 w-auto" />
-              <div className="h-8 w-px bg-gray-300 dark:bg-gray-600"></div>
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-senati rounded-lg">
-                  <Icon icon="mdi:comment-text-multiple" className="text-2xl text-white" />
+        <div className="px-3 py-2 sm:px-4 sm:py-4">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 sm:gap-4 min-w-0">
+              <img src={logoSenati} alt="SENATI" className="h-8 sm:h-12 w-auto shrink-0" />
+              <div className="hidden sm:block h-8 w-px bg-gray-300 dark:bg-gray-600"></div>
+              <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                <div className="p-1.5 sm:p-2 bg-senati rounded-lg shrink-0">
+                  <Icon icon="mdi:comment-text-multiple" className="text-lg sm:text-2xl text-white" />
                 </div>
-                <div>
-                  <h1 className="text-xl font-bold text-gray-900 dark:text-white">Retroalimentación Docente</h1>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Sistema de gestión de comentarios</p>
+                <div className="min-w-0">
+                  <h1 className="text-sm sm:text-xl font-bold text-gray-900 dark:text-white truncate">Retroalimentación Docente</h1>
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 hidden xs:block">Sistema de gestión de comentarios</p>
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 sm:gap-4 shrink-0">
               <button
                 onClick={toggleTheme}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="p-1.5 sm:p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 title={theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'}
               >
                 <Icon
                   icon={theme === 'light' ? 'mdi:weather-night' : 'mdi:weather-sunny'}
-                  className="text-xl text-gray-600 dark:text-yellow-400"
+                  className="text-lg sm:text-xl text-gray-600 dark:text-yellow-400"
                 />
               </button>
-              <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+              <div className="hidden sm:flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
                 <Icon icon="mdi:cloud-check" className="text-emerald-500" />
                 <span className="hidden sm:inline">Guardado automático</span>
               </div>
@@ -72,8 +72,8 @@ function App() {
       </header>
 
       <main className="px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          <div className="lg:col-span-5 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+          <div className="md:col-span-1 lg:col-span-5 space-y-6">
             <ImportStudents
               onImport={importStudents}
               onClear={clearStudents}
@@ -86,8 +86,8 @@ function App() {
             />
           </div>
 
-          <div className="lg:col-span-7 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="md:col-span-1 lg:col-span-7 space-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <WorkTypes
                 workTypes={workTypes}
                 subWorks={subWorks}
