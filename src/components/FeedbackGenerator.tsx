@@ -73,7 +73,20 @@ ${footer}`;
   };
 
   return (
-    <Card title="Generador de Retroalimentación" icon="mdi:message-text">
+    <Card 
+        title="Generador de Retroalimentación" 
+        icon="mdi:message-text"
+        headerAction={
+          <button
+            onClick={clearCopiedStudents}
+            className="text-xs text-senati hover:underline flex items-center gap-1"
+            disabled={copiedStudents.size === 0}
+          >
+            <Icon icon="mdi:refresh" className="text-sm" />
+            Resetear
+          </button>
+        }
+      >
       <div className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Select
