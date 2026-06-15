@@ -72,31 +72,63 @@ const DEFAULT_TEMPLATES: FeedbackTemplate[] = [
     id: '11', 
     workTypeId: 'competencias_habilidades', 
     category: 'excelente', 
-    content: 'Demuestras un excelente desarrollo de las competencias técnicas evaluadas. Tu desempeño refleja práctica, dedicación y autonomía. ¡Felicitaciones por este logro! Continúa así y si quieres explorar técnicas más avanzadas, con gusto te oriento.' 
+    content: 'Durante este periodo has demostrado habilidades excepcionales. Tu capacidad de comunicación, trabajo en equipo y resolución de problemas es admirable. Participas activamente, escuchas a tus compañeros, aportas ideas creativas y te adaptas con facilidad a nuevos desafíos. Tu liderazgo natural y empatía enriquecen el ambiente de aprendizaje. ¡Sigue desarrollando estas valiosas competencias personales!' 
   },
   { 
     id: '12', 
     workTypeId: 'competencias_habilidades', 
     category: 'bueno', 
-    content: 'Muestras un buen desarrollo de las habilidades técnicas requeridas. Se nota tu práctica y dedicación. Para alcanzar un nivel superior, te sugiero seguir practicando con constancia y prestar atención a los detalles. Si necesitas recursos adicionales o tienes dudas, aquí estoy para apoyarte.' 
+    content: 'Has mostrado buenas habilidades personales durante este ciclo. Comunicas tus ideas con claridad, colaboras con tus compañeros cuando se requiere y demuestras capacidad para resolver problemas. Para fortalecer aún más estas habilidades, te sugiero participar más activamente en actividades grupales y buscar oportunidades de liderazgo. ¡Vas por excelente camino!' 
   },
   { 
     id: '13', 
     workTypeId: 'competencias_habilidades', 
     category: 'regular', 
-    content: 'Tu desarrollo de competencias técnicas está en un nivel básico y hay aspectos que podemos fortalecer. Te animo a dedicar más tiempo a la práctica y a seguir los procedimientos paso a paso. Si tienes dificultades o dudas, no dudes en preguntarme. Juntos podemos trabajar para que mejores.' 
+    content: 'Tu desarrollo de habilidades personales ha sido básico durante este periodo. He notado que puedes mejorar en comunicación, participación en equipo y resolución de problemas. A veces te cuesta expresar tus ideas o integrarte activamente en las actividades grupales. Te animo a involucrarte más, practicar la escucha activa y atreverte a proponer soluciones. Estoy aquí para ayudarte a crecer en estas áreas.' 
   },
   { 
     id: '14', 
     workTypeId: 'competencias_habilidades', 
     category: 'debe_mejorar', 
-    content: 'Veo que hay áreas importantes que necesitas reforzar en tus habilidades técnicas. Quiero que sepas que esto es parte del proceso de aprendizaje y que estoy aquí para ayudarte. Te propongo que nos reunamos para crear un plan de práctica que te permita avanzar. ¡No te desanimes, con dedicación lo vas a lograr!' 
+    content: 'He observado que necesitas reforzar significativamente tus habilidades personales este ciclo. Aspectos como la comunicación, el trabajo colaborativo, la creatividad y la resolución de problemas requieren atención. Entiendo que estas habilidades se desarrollan con práctica y confianza. Te propongo que trabajemos juntos en un plan personalizado: ejercicios de comunicación, dinámicas de equipo y metodologías para resolver desafíos. ¡Puedes lograrlo, cuenta conmigo!' 
   },
   { 
     id: '15', 
     workTypeId: 'competencias_habilidades', 
     category: 'no_presento', 
-    content: 'No pude evaluar tus competencias en esta oportunidad porque no participaste en la actividad práctica. Si tuviste alguna dificultad, me gustaría saberlo para ver cómo podemos avanzar. Cuenta conmigo para apoyarte.' 
+    content: 'No he podido evaluar tus habilidades personales durante este periodo ya que no se ha observado tu participación en actividades grupales, discusiones o ejercicios colaborativos. Me preocupa tu aislamiento y quiero entender qué te está sucediendo. Por favor, acércate para que podamos conversar y buscar la manera de integrarte. Tu desarrollo en estas competencias es fundamental para tu futuro profesional.' 
+  },
+  
+  // Actitudes (Subcategoría de Competencias y Habilidades)
+  { 
+    id: 'act-1', 
+    workTypeId: 'competencias_habilidades', 
+    category: 'excelente', 
+    content: 'A lo largo de este ciclo académico has demostrado una actitud ejemplar. Eres puntual, responsable con tus compromisos, respetuoso con compañeros y docentes. Tu integridad, honestidad y comportamiento ético son admirables. Muestras entusiasmo por aprender, perseverancia ante los desafíos y una disposición positiva que inspira a los demás. ¡Eres un modelo a seguir!' 
+  },
+  { 
+    id: 'act-2', 
+    workTypeId: 'competencias_habilidades', 
+    category: 'bueno', 
+    content: 'Durante este periodo has mantenido una actitud positiva. Generalmente cumples con tus responsabilidades, respetas a tus compañeros y muestras disposición para colaborar. Valoro tu compromiso con el aprendizaje y tu comportamiento respetuoso. Para seguir creciendo, te animo a fortalecer tu proactividad, asumir más iniciativa y mantener la consistencia en tu entusiasmo. ¡Sigue así!' 
+  },
+  { 
+    id: 'act-3', 
+    workTypeId: 'competencias_habilidades', 
+    category: 'regular', 
+    content: 'Tu actitud durante este ciclo ha sido irregular. He notado algunos aspectos positivos, pero también hay áreas por mejorar como la puntualidad, la consistencia en tu compromiso o la forma de relacionarte con el grupo. A veces muestras desinterés o falta de entusiasmo. Reflexiona sobre cómo una actitud positiva impacta tu aprendizaje y el de los demás. Estoy disponible para conversar y orientarte.' 
+  },
+  { 
+    id: 'act-4', 
+    workTypeId: 'competencias_habilidades', 
+    category: 'debe_mejorar', 
+    content: 'Me preocupa tu actitud durante este periodo académico. He observado dificultades en la puntualidad, responsabilidad con tus compromisos, respeto hacia el grupo o disposición para el aprendizaje. Estas actitudes son fundamentales para tu éxito profesional. Entiendo que pueden existir factores personales afectándote. Te invito sinceramente a conversar conmigo para entender tu situación y trabajar juntos en un cambio positivo. ¡Confío en que puedes mejorar!' 
+  },
+  { 
+    id: 'act-5', 
+    workTypeId: 'competencias_habilidades', 
+    category: 'no_presento', 
+    content: 'No he podido evaluar tus actitudes durante este ciclo debido a tu inasistencia constante, falta de participación o desconexión de las actividades académicas. Esto me preocupa considerablemente ya que las actitudes son tan importantes como los conocimientos técnicos. Por favor, acércate urgentemente para conversar sobre tu situación y encontrar juntos una solución. Estoy aquí para apoyarte.' 
   },
   
   // Participación

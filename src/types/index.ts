@@ -39,6 +39,7 @@ export const DEFAULT_SUBWORKS: SubWork[] = [
   { id: 'proyecto_final', name: 'Proyecto Final', workTypeId: 'productos_academicos' },
   { id: 'exposiciones', name: 'Exposiciones', workTypeId: 'presentaciones' },
   { id: 'habilidades', name: 'Habilidades', workTypeId: 'competencias_habilidades' },
+  { id: 'actitudes', name: 'Actitudes', workTypeId: 'competencias_habilidades' },
   { id: 'participacion_clase', name: 'Participación', workTypeId: 'participacion' },
   { id: 'plataforma_externa', name: 'Plataforma Externas', workTypeId: 'plataformas_externas' },
 ];
